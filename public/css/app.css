@@ -1,0 +1,265 @@
+/* ============================================================
+   GoZay - Custom styles (Bootstrap 5 + brand blue/white)
+   ============================================================ */
+
+:root {
+  --gz-primary: #0d6efd;        /* Biru utama brand GoZay */
+  --gz-primary-dark: #0b5ed7;
+  --gz-navy: #0a2540;           /* Navy untuk sidebar/footer */
+  --gz-light: #f4f7fb;          /* Background abu-biru tipis */
+  --gz-radius: 14px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--gz-light);
+}
+
+/* ---------- Notifikasi toast modern ---------- */
+.gz-toast {
+  border: none;
+  border-radius: 16px;
+  padding: 12px 16px 12px 14px;
+  box-shadow: 0 16px 40px rgba(10, 37, 64, 0.16) !important;
+  backdrop-filter: blur(8px);
+}
+.gz-toast .swal2-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 2px 10px 2px 0;
+  margin: 0;
+  text-align: left;
+}
+.gz-toast .gz-toast-close {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  opacity: 0.9;
+  top: 2px;
+  right: 4px;
+}
+.gz-toast .gz-toast-close:hover { opacity: 1; color: #fff; }
+.gz-toast .swal2-icon {
+  width: 34px;
+  height: 34px;
+  margin: 2px 12px 2px 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px;
+}
+.gz-toast .swal2-icon .material-symbols-outlined {
+  font-size: 19px;
+  color: inherit;
+  line-height: 34px;
+}
+.gz-toast .gz-toast-progress {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.35);
+}
+.gz-toast .gz-toast-progress.swal2-timer-progress-bar {
+  background: #fff;
+}
+.gz-toast-success { background: linear-gradient(135deg, #23b26d, #1e9b5c) !important; }
+.gz-toast-success .swal2-icon, .gz-toast-success .swal2-title { color: #fff; }
+.gz-toast-error { background: linear-gradient(135deg, #e8424a, #d62f37) !important; }
+.gz-toast-error .swal2-icon, .gz-toast-error .swal2-title { color: #fff; }
+.gz-toast-warning { background: linear-gradient(135deg, #ffab00, #f39b00) !important; }
+.gz-toast-warning .swal2-icon, .gz-toast-warning .swal2-title { color: #fff; }
+.gz-toast-info { background: linear-gradient(135deg, #3d8bfd, #0d6efd) !important; }
+.gz-toast-info .swal2-icon, .gz-toast-info .swal2-title { color: #fff; }
+
+.gz-toast-animate-in {
+  animation: gzToastIn .28s cubic-bezier(.21,1.02,.73,1) forwards !important;
+}
+.gz-toast-animate-out {
+  animation: gzToastOut .25s ease-in forwards !important;
+}
+@keyframes gzToastIn {
+  0%   { opacity: 0; transform: translateX(40px) scale(.92); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes gzToastOut {
+  0%   { opacity: 1; transform: translateX(0) scale(1); }
+  100% { opacity: 0; transform: translateX(40px) scale(.92); }
+}
+
+/* ---------- Dialog konfirmasi modern ---------- */
+.gz-confirm {
+  border-radius: 20px;
+  padding: 30px 28px 24px;
+  box-shadow: 0 24px 60px rgba(10, 37, 64, 0.22) !important;
+}
+.gz-confirm .swal2-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--gz-navy);
+  padding-top: 8px;
+}
+.gz-confirm .swal2-html-container {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 14px;
+  color: #5a6573;
+  line-height: 1.55;
+  margin-top: 2px;
+}
+.gz-confirm .swal2-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 6px;
+  border: none;
+  border-radius: 18px;
+  background: #fee2e2 !important;
+  color: #d62f37;
+}
+.gz-confirm .swal2-icon .material-symbols-outlined {
+  font-size: 30px;
+  line-height: 56px;
+}
+.gz-confirm-success .swal2-icon { background: #d1fae5 !important; color: #16a34a; }
+.gz-confirm-warning .swal2-icon { background: #fef3c7 !important; color: #d97706; }
+.gz-confirm .swal2-actions { margin-top: 22px; }
+.gz-confirm .swal2-actions button { margin: 0 5px; }
+.gz-confirm-btn {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 22px !important;
+  border-radius: 12px !important;
+  box-shadow: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.gz-confirm-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(10, 37, 64, 0.14); }
+.gz-confirm-btn-ghost { color: #5a6573 !important; border: 1px solid #e3e9f0 !important; }
+.gz-confirm-btn-ghost:hover { background: #f1f4f9 !important; box-shadow: none !important; }
+
+/* ---------- Utilitas brand ---------- */
+.bg-gz-light { background-color: var(--gz-light); }
+.text-gz-navy { color: var(--gz-navy); }
+.bg-gz-navy { background-color: var(--gz-navy); }
+.rounded-gz { border-radius: var(--gz-radius); }
+
+.card {
+  border-radius: var(--gz-radius);
+  border: 1px solid #e8eef5;
+}
+
+.shadow-soft { box-shadow: 0 6px 24px rgba(10, 37, 64, 0.08); }
+.shadow-hover { transition: transform .18s ease, box-shadow .18s ease; }
+.shadow-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(10, 37, 64, 0.14); }
+
+/* ---------- Navbar publik ---------- */
+.navbar-gz {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(10, 37, 64, 0.06);
+}
+.navbar-gz .nav-link { color: #33475b; font-weight: 500; }
+.navbar-gz .nav-link:hover, .navbar-gz .nav-link.active { color: var(--gz-primary); }
+
+/* ---------- Hero ---------- */
+.hero-gz {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(10, 37, 64, 0.62), rgba(10, 37, 64, 0.35)),
+    url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80')
+    center/cover no-repeat;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+}
+.hero-title { color: #fff; font-weight: 800; letter-spacing: -0.02em; }
+.hero-sub { color: rgba(255,255,255,0.92); max-width: 560px; }
+
+/* ---------- Form pencarian ---------- */
+.search-panel {
+  background: #fff;
+  border-radius: var(--gz-radius);
+  box-shadow: 0 16px 40px rgba(10, 37, 64, 0.16);
+}
+
+/* ---------- Seat map ---------- */
+.seat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.seat {
+  display: flex; align-items: center; justify-content: center;
+  height: 42px; border-radius: 10px;
+  font-weight: 700; font-size: .8rem; cursor: pointer;
+  border: 1px solid transparent; user-select: none;
+  transition: transform .12s ease;
+}
+.seat:hover:not(.seat-taken) { transform: scale(1.06); }
+.seat-available { background: #d6f5dd; color: #0e8a3e; border-color: #b8ecc6; }
+.seat-taken { background: #f3d7d7; color: #c0392b; cursor: not-allowed; border-color: #f0c4c4; }
+.seat-selected { background: #0d6efd !important; color: #fff !important; border-color: #0d6efd !important; }
+.seat-legend { display: inline-block; width: 18px; height: 18px; border-radius: 6px; vertical-align: middle; }
+
+/* ---------- Status badge ---------- */
+.badge-soft-success { background: #d6f5dd; color: #0e8a3e; }
+.badge-soft-danger  { background: #fde3e3; color: #c0392b; }
+.badge-soft-warning { background: #fff2d6; color: #b7791f; }
+.badge-soft-info    { background: #d6ecff; color: #0b5ed7; }
+.badge-soft-secondary { background: #e8eef5; color: #4b5b6c; }
+
+/* ---------- Admin sidebar ---------- */
+.admin-sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b2a4a 0%, var(--gz-navy) 100%);
+}
+.admin-sidebar .nav-link {
+  color: #b9c7d8; border-radius: 10px; padding: .6rem .9rem; margin-bottom: 2px;
+}
+.admin-sidebar .nav-link:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.admin-sidebar .nav-link.active { background: var(--gz-primary); color: #fff; }
+.admin-content { background: var(--gz-light); min-height: 100vh; }
+
+/* ---------- OTP input ---------- */
+.otp-input {
+  width: 56px; height: 64px; text-align: center;
+  font-size: 1.6rem; font-weight: 700;
+  border-radius: 12px; border: 1px solid #d3dce8;
+}
+.otp-input:focus { border-color: var(--gz-primary); box-shadow: 0 0 0 .2rem rgba(13,110,253,.18); }
+
+/* ---------- Footer ---------- */
+.footer-gz { background: var(--gz-navy); color: #b9c7d8; }
+.footer-gz a { color: #b9c7d8; text-decoration: none; }
+.footer-gz a:hover { color: #fff; }
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 767px) {
+  .hero-gz { min-height: 80vh; }
+  .otp-input { width: 44px; height: 52px; font-size: 1.3rem; }
+}
+
+/* ---------- E-Ticket ---------- */
+.eticket { display: flex; flex-wrap: wrap; border: 2px solid #0d6efd; border-radius: 16px; overflow: hidden; background: #fff; }
+.eticket-main { flex: 1 1 420px; }
+.eticket-side {
+  flex: 0 1 200px; border-left: 2px dashed #d3dce8;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 20px; background: #f8fafd;
+}
+.ticket-line {
+  height: 2px; background: repeating-linear-gradient(90deg, #cbd5e1 0 8px, transparent 8px 16px);
+  margin: 6px 0;
+}
+.ticket-cut { border-top: 2px dashed #d3dce8; margin: 6px -16px; }
+
+/* ---------- Status ikon pembayaran ---------- */
+.icon-success, .icon-error, .icon-pending {
+  width: 84px; height: 84px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 2.4rem; color: #fff;
+}
+.icon-success { background: #198754; }
+.icon-error   { background: #dc3545; }
+.icon-pending { background: #ffc107; color: #1f2937; }
+
+/* ---------- QR mock ---------- */
+.qr-mock { width: 172px; height: 172px; background: #fff; border: 1px solid #e8eef5; border-radius: 14px; box-shadow: 0 6px 18px rgba(10,37,64,.08); }
+
+/* ---------- Misc ---------- */
+.shadow-primary-soft { box-shadow: 0 10px 30px rgba(13,110,253,.25); }
+.object-fit-cover { object-fit: cover; }
+.avatar-user { box-shadow: 0 6px 16px rgba(10,37,64,.12); }
